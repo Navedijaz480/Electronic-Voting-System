@@ -30,6 +30,7 @@ contract Voting {
         mapping(address => VoteStatus) voteByAccount;
     }
 
+
     event VotingStarted(uint256 indexed votingId);
     event VotePlaced(uint256 indexed votingId, address voter, VoteStatus status, uint256 voteWeight);
     event VotingExecuted(uint256 indexed votingId, VotingResult result);
