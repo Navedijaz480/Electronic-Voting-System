@@ -191,7 +191,6 @@ contract Voting is Ownable {
     {
         return _votersWhitelist[_voterAddress].votedProposalId;
     }
-
     /**
      * @dev Get winning proposal id. This can be seen by registered voters only.
      * The workflow status has to be in VotesTallied state.
@@ -209,7 +208,6 @@ contract Voting is Ownable {
     {
         return _winningProposalId;
     }
-
     /**
      * @dev private method to check if the proposal is alread registered.
      * @param _proposalDescription the proposal description
