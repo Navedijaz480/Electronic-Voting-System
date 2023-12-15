@@ -9,7 +9,6 @@ contract voting{
         uint votes;
         bool isRegistered;
     }
-
     mapping(string => candidate) candidates;
     uint index = 0;
     string[] candidateList;
