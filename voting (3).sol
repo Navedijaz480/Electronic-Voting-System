@@ -115,6 +115,7 @@ contract voting_system{
         }
         else console.log("you cannot vote");       
     }
+    
 
     modifier voter_repeat(){
         if(!voters[msg.sender].registered){
@@ -142,7 +143,6 @@ contract voting_system{
     modifier before_end() {
         if (voting == vs.started) _;
     }
-
     modifier voting_started(){
         if (voting == vs.started) _;
         else console.log("voting has not started yet");
@@ -152,7 +152,6 @@ contract voting_system{
         if (!parties[p].party_registered) _;
         else console.log("party already registered");
     }
-
     modifier all_cand() {
         for(uint i = 0; i < parties_key.length; i++){
             if(keccak256(bytes(parties[parties_key[i]].name)) == keccak256(bytes("no one"))){
